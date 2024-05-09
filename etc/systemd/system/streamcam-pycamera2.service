@@ -1,0 +1,23 @@
+[Unit]
+Description=Cam service (pycamera2)
+Requires=streamcam.socket
+After=streamcam.socket
+
+Wants=streamcam-cvlc.service
+
+[Service]
+TimeoutStartSec=infinity
+
+Sockets=streamcam.socket
+
+StandardInput=null
+StandardOutput=fd:streamcam.socket
+StandardError=journal
+User=streamcam
+ExecStart=/usr/bin/pycamera2_to_stdout.py
+
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
