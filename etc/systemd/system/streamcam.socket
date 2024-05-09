@@ -1,0 +1,10 @@
+[Unit]
+Description=Cam service socket (Socket between rpicam-vid and cvlc)
+
+[Socket]
+ListenFIFO=%t/streamcam
+Service=streamcam-cvlc.service
+#SocketMode=0666
+SocketUser=streamcam
+#RemoveOnStop=false
+#DefaultDependencies=no

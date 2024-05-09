@@ -1,0 +1,18 @@
+[Unit]
+Description=Cam service (cvlc)
+Requires=streamcam.socket
+After=streamcam.socket
+
+[Service]
+TimeoutStartSec=infinity
+
+Sockets=streamcam.socket
+
+StandardInput=fd:streamcam.socket
+StandardOutput=null
+StandardError=journal
+User=streamcam
+ExecStart=cvlc stream:///dev/stdin --sout '#rtp{sdp=rtsp://:8554/}' :demux=h264
+
+Restart=always
+RestartSec=5s
