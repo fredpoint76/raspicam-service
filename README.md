@@ -6,6 +6,12 @@ Set of tools and systemd service to stream a local camera to a server in RSTP.
 ## INSTALL
 Deploy init script in systemd appropriate directory and the python script in /usr/bin.
 
+Create user streamcam:
+```
+sudo useradd streamcam
+sudo usermod streamcam -G video
+```
+
 Then finish the install in systemd for rpicam-vid camera setup (legacy pi camera):
 ```
 sudo systemctl daemon-reload
