@@ -14,7 +14,7 @@ StandardInput=null
 StandardOutput=fd:streamcam.socket
 StandardError=journal
 User=streamcam
-ExecStart=/usr/bin/rpicam-vid -t 0 --brightness -0.1 -v 0 --inline -o -
+ExecStart=/usr/bin/rpicam-vid -t 0 -v 0 --inline -o -
 
 Restart=always
 RestartSec=5s
