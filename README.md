@@ -18,7 +18,7 @@ sudo systemctl daemon-reload
 sudo systemctl start streamcam-rpicam-vid`
 ```
 
-Or for camera support by Pycamera2 project (https://github.com/raspberrypi/picamera2)
+Or for camera supported by Pycamera2 project (https://github.com/raspberrypi/picamera2)
 ```
 sudo systemctl daemon-reload
 sudo systemctl start streamcam-pycamera2
