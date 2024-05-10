@@ -15,7 +15,7 @@ sudo usermod streamcam -G video
 Then finish the install in systemd for rpicam-vid camera setup (legacy pi camera):
 ```
 sudo systemctl daemon-reload
-sudo systemctl start streamcam-rpicam-vid`
+sudo systemctl start streamcam-rpicam-vid
 ```
 
 Or for camera supported by Pycamera2 project (https://github.com/raspberrypi/picamera2)
